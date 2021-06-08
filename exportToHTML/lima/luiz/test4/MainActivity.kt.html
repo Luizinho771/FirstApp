@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>MainActivity.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MainActivity.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">lima.luiz.test4</span>
+
+<span class="s1">import androidx.appcompat.app.AppCompatActivity</span>
+<span class="s1">import android.os.Bundle</span>
+<span class="s1">import androidx.drawerlayout.widget.DrawerLayout</span>
+<span class="s1">import androidx.navigation.NavController</span>
+<span class="s1">import androidx.navigation.Navigation</span>
+<span class="s1">import androidx.navigation.findNavController</span>
+<span class="s1">import androidx.navigation.ui.AppBarConfiguration</span>
+<span class="s1">import androidx.navigation.ui.setupActionBarWithNavController</span>
+<span class="s1">import androidx.navigation.ui.navigateUp</span>
+<span class="s1">import androidx.navigation.ui.setupWithNavController</span>
+<span class="s1">import com.google.android.material.navigation.NavigationView</span>
+
+<span class="s0">class </span><span class="s1">MainActivity : AppCompatActivity() {</span>
+
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">navController: NavController</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">drawerLayout: DrawerLayout</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">appBarConfiguration: AppBarConfiguration</span>
+
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">navigationView: NavigationView = findViewById&lt;NavigationView&gt;(R.id.navigationView)</span>
+
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">onCreate(savedInstanceState: Bundle?) {</span>
+        <span class="s0">super</span><span class="s1">.onCreate(savedInstanceState)</span>
+        <span class="s1">setContentView(R.layout.activity_main)</span>
+
+        <span class="s1">navController = findNavController(R.id.fragment)</span>
+        <span class="s1">drawerLayout = findViewById(R.id.drawer_layout)</span>
+
+        <span class="s1">navigationView.setupWithNavController(navController)</span>
+
+        <span class="s1">appBarConfiguration = AppBarConfiguration(navController.graph</span><span class="s0">,</span><span class="s1">drawerLayout)</span>
+        <span class="s1">setupActionBarWithNavController(navController</span><span class="s0">,</span><span class="s1">appBarConfiguration)</span>
+
+        <span class="s2">//https://developer.android.com/guide/navigation/navigation-migrate</span>
+        <span class="s2">//igual o exempo no site mas não funciona :/</span>
+        <span class="s1">override </span><span class="s0">fun </span><span class="s1">onSupportNavigateUp(): Boolean {</span>
+            <span class="s0">val </span><span class="s1">navController = findNavController(R.id.fragment)</span>
+            <span class="s0">return </span><span class="s1">navController.navigateUp(appBarConfiguration)</span>
+        <span class="s1">}</span>
+
+
+
+
+
+
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>

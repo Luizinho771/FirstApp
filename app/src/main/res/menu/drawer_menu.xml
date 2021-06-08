@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:title="@string/btn_1"
+            android:id="@+id/fragmentWhoAmI"/>
+        <item
+            android:title="@string/btn_2"
+            android:id="@+id/fragmentBadges"/>
+        <item
+            android:title="@string/btn_3"
+            android:id="@+id/fragmentTeam"/>
+    </group>
+</menu>
