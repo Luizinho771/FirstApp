@@ -5,11 +5,11 @@
         <item
             android:title="@string/btn_1"
             android:id="@+id/fragmentWhoAmI"/>
-        <item
+        <!--<item
             android:title="@string/btn_2"
             android:id="@+id/fragmentBadges"/>
         <item
             android:title="@string/btn_3"
-            android:id="@+id/fragmentTeam"/>
+            android:id="@+id/fragmentTeam"/>-->
     </group>
 </menu>

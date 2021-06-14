@@ -1,16 +1,16 @@
 package lima.luiz.test4
 
-import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import androidx.annotation.RequiresApi
+import androidx.navigation.Navigation
+import kotlinx.android.synthetic.main.fragment_menu.*
+import kotlinx.android.synthetic.main.fragment_menu.view.*
 
 
-@RequiresApi(Build.VERSION_CODES.M)
 class FragmentMenu : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,11 +26,20 @@ class FragmentMenu : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_menu, container, false)
 
-        //Como reconhecer o toque do botão num fragment?
-        //var bnt1 = view.findViewById<Button>(android.R.id.btn_1)
+        view.btn_1.setOnClickListener{
+            Log.d("debug","botão 1")
+            Navigation.findNavController(view).navigate(R.id.gotoWhoAmI)
+        }
 
+        /*view.btn_2.setOnClickListener{
+            Log.d("debug","botão 2")
+            Navigation.findNavController(view).navigate(R.id.gotoBadges)
+        }
 
-
+        view.btn_3.setOnClickListener{
+            Log.d("debug","botão 3")
+            Navigation.findNavController(view).navigate(R.id.gotoTeam)
+        }*/
 
         return view
     }

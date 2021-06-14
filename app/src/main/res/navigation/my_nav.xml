@@ -10,13 +10,13 @@
         android:label="fragment_menu"
         tools:layout="@layout/fragment_menu" >
         <action
-            android:id="@+id/action_fragmentMenu_to_fragmentBadges"
+            android:id="@+id/gotoBadges"
             app:destination="@id/fragmentBadges" />
         <action
-            android:id="@+id/action_fragmentMenu_to_fragmentAwards"
+            android:id="@+id/gotoWhoAmI"
             app:destination="@id/fragmentWhoAmI" />
         <action
-            android:id="@+id/action_fragmentMenu_to_fragmentTeam"
+            android:id="@+id/gotoTeam"
             app:destination="@id/fragmentTeam" />
     </fragment>
     <fragment
