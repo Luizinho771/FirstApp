@@ -31,7 +31,7 @@ class FragmentMenu : Fragment() {
             Navigation.findNavController(view).navigate(R.id.gotoWhoAmI)
         }
 
-        /*view.btn_2.setOnClickListener{
+        view.btn_2.setOnClickListener{
             Log.d("debug","botão 2")
             Navigation.findNavController(view).navigate(R.id.gotoBadges)
         }
@@ -39,7 +39,7 @@ class FragmentMenu : Fragment() {
         view.btn_3.setOnClickListener{
             Log.d("debug","botão 3")
             Navigation.findNavController(view).navigate(R.id.gotoTeam)
-        }*/
+        }
 
         return view
     }
